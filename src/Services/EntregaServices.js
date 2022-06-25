@@ -9,7 +9,6 @@ class EntregaServices {
   }
 
   createEntrega(entrega){
-    console.log(entrega);
     return axios.post(ENTREGA_BASE_API_URL, entrega);
   }
 

@@ -6,20 +6,22 @@ export default class ViewDronePage extends Component {
     super(props);
     this.state = {
       id: this.props.match.params.id,
-      drone: {}
+      drone: {},
+      entregas: []
     }
   }
 
   componentDidMount(){
     DroneServices.getDroneById(this.state.id).then(res => {
-      this.setState({drone: res.data});
+      console.log(res.data);
+      this.setState({drone: res.data, entregas: res.data.entregas});
     });
   }
 
   render() {
     return (
       <div>
-        <div className="card col-md-6 offset-md-3">
+        <div className="card col-md-8 offset-md-2">
           <h1 className="text-center">Drone Details</h1>
           <div className="card-body">
             <div className="row">
@@ -29,6 +31,34 @@ export default class ViewDronePage extends Component {
               <h6>{this.state.drone.marca}</h6>
               <label>Drone Modelo: </label>
               <h6>{this.state.drone.modelo}</h6>
+
+              <h2>Entregas: </h2>
+              <div className="row">
+                <table className="table table-striped table-bordered">
+                  <thead>
+                    <tr>
+                      <th>Entrega id</th>
+                      <th>Entrega Latitude</th>
+                      <th>Entrega Longitude</th>
+                      <th>Status da Entrega</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {
+                      this.state.entregas.map(
+                        entrega => 
+                        <tr key={entrega.id}>
+                          <td>{entrega.id}</td>
+                          <td>{entrega.latitude}</td>
+                          <td>{entrega.longitude}</td>
+                          <td>{entrega.status}</td>
+                        </tr>
+                        )
+                    }
+                  </tbody>
+                </table>
+                
+              </div>
             </div>
           </div>
         </div>

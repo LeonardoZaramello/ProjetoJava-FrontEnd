@@ -8,6 +8,7 @@ export default class CreateEntregaPage extends Component {
       id: this.props.match.params.id,
       latitude: "",
       longitude: "",
+      error: "",
     };
 
     this.saveOrUpdateEntrega = this.saveOrUpdateEntrega.bind(this);
@@ -33,9 +34,15 @@ export default class CreateEntregaPage extends Component {
     console.log(`Entrega salva: ${JSON.stringify(entrega)}`);
 
     if (this.state.id === "_add") {
-      EntregaServices.createEntrega(entrega).then((res) => {
-        this.props.history.push("/entregas");
-      });
+      EntregaServices.createEntrega(entrega)
+        .then((res) => {
+          this.props.history.push("/entregas");
+        })
+        .catch((error) => {
+          console.log(error);
+          this.setState({ error: "No Drones Available"});
+        });
+
     } else {
       EntregaServices.updateEntrega(entrega, this.state.id).then((res) => {
         this.props.history.push("/entregas");
@@ -71,6 +78,7 @@ export default class CreateEntregaPage extends Component {
           <div className="row">
             <div className="card col-md-6 offset-md-3 offset-md-3">
               {this.getTitle()}
+              
               <div className="card-body">
                 <form>
                   <div className="form-group">
@@ -112,6 +120,11 @@ export default class CreateEntregaPage extends Component {
                   Cancel
                 </button>
               </div>
+                <br />
+                {
+                  <h3 className="text-center">{this.state.error}</h3>
+                }
+                <br />
             </div>
           </div>
         </div>
