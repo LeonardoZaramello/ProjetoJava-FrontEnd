@@ -57,6 +57,7 @@ export default class ListDronePage extends Component {
                 <th>Drone id</th>
                 <th>Drone Marca</th>
                 <th>Drone Modelo</th>
+                <th>Status</th>
                 <th>Actions</th>
               </tr>
             </thead>
@@ -69,6 +70,7 @@ export default class ListDronePage extends Component {
                     <td>{drone.id}</td>
                     <td>{drone.marca}</td>
                     <td>{drone.modelo}</td>
+                    <td>{drone.status}</td>
                     <td>
                       <button onClick={() => this.getDrone(drone.id)} className="btn btn-warning" style={{marginLeft: "10px"}}>Details</button>
                       <button onClick={() => this.editDrone(drone.id)} className="btn btn-info" style={{marginLeft: "10px"}}>Update</button>
