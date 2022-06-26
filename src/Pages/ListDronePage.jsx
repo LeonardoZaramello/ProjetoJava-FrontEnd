@@ -72,9 +72,9 @@ export default class ListDronePage extends Component {
                     <td>{drone.modelo}</td>
                     <td>{drone.status}</td>
                     <td>
-                      <button onClick={() => this.getDrone(drone.id)} className="btn btn-warning" style={{marginLeft: "10px"}}>Details</button>
-                      <button onClick={() => this.editDrone(drone.id)} className="btn btn-info" style={{marginLeft: "10px"}}>Update</button>
-                      <button onClick={() => this.deleteDrone(drone.id)} className="btn btn-danger" style={{marginLeft: "10px"}}>Delete</button>
+                      <button onClick={() => this.getDrone(drone.id)} className="btn btn-warning" style={{marginLeft: "10px"}}>Detalhes</button>
+                      <button onClick={() => this.editDrone(drone.id)} className="btn btn-info" style={{marginLeft: "10px"}}>Atualizar</button>
+                      <button onClick={() => this.deleteDrone(drone.id)} className="btn btn-danger" style={{marginLeft: "10px"}}>Deletar</button>
                     </td>
                   </tr>
                   )

@@ -72,9 +72,9 @@ export default class ListEntregaPage extends Component {
                     <td>{entrega.longitude}</td>
                     <td>{entrega.status}</td>
                     <td>
-                      <button onClick={() => this.getEntrega(entrega.id)} className="btn btn-warning" style={{marginLeft: "10px"}}>Details</button>
-                      <button onClick={() => this.editEntrega(entrega.id)} className="btn btn-info" style={{marginLeft: "10px"}}>Update</button>
-                      <button onClick={() => this.deleteEntrega(entrega.id)} className="btn btn-danger" style={{marginLeft: "10px"}}>Delete</button>
+                      <button onClick={() => this.getEntrega(entrega.id)} className="btn btn-warning" style={{marginLeft: "10px"}}>Detalhes</button>
+                      <button onClick={() => this.editEntrega(entrega.id)} className="btn btn-info" style={{marginLeft: "10px"}}>Atualizar</button>
+                      <button onClick={() => this.deleteEntrega(entrega.id)} className="btn btn-danger" style={{marginLeft: "10px"}}>Deletar</button>
                     </td>
                   </tr>
                   )

@@ -22,7 +22,7 @@ export default class ViewDronePage extends Component {
     return (
       <div>
         <div className="card col-md-8 offset-md-2">
-          <h1 className="text-center">Drone Details</h1>
+          <h1 className="text-center">Detalhes do Drone</h1>
           <div className="card-body">
             <div className="row">
               <label>Drone Id: </label>

@@ -33,7 +33,7 @@ export default class ViewEntregaPage extends Component {
     return (
       <div>
         <div className="card col-md-6 offset-md-3">
-          <h1 className="text-center">Entrega Details</h1>
+          <h1 className="text-center">Detalhes da Entrega</h1>
           <div className="card-body">
             <div className="row">
               <label>Entrega Id: </label>
