@@ -23,6 +23,10 @@ class EntregaServices {
   deleteEntrega(entregaId){
     return axios.delete(`${ENTREGA_BASE_API_URL}/${entregaId}`);
   }
+
+  updateEntregaStatus(entregaId){
+    return axios.put(`${ENTREGA_BASE_API_URL}/entrega-status/${entregaId}`)
+  }
 }
 
 export default new EntregaServices()

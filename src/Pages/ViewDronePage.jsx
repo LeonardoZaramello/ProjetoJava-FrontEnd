@@ -41,6 +41,8 @@ export default class ViewDronePage extends Component {
                       <th>Entrega Latitude</th>
                       <th>Entrega Longitude</th>
                       <th>Status da Entrega</th>
+                      <th>Data da Saida</th>
+                      <th>Data da Entrega</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -52,6 +54,8 @@ export default class ViewDronePage extends Component {
                           <td>{entrega.latitude}</td>
                           <td>{entrega.longitude}</td>
                           <td>{entrega.status}</td>
+                          <td>{entrega.dataSaida}</td>
+                          <td>{entrega.dataEntrega}</td>
                         </tr>
                         )
                     }
