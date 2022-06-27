@@ -16,7 +16,7 @@ Repositório para entrega final da aceleração de Java na Trybe
 
 
 #### Retorna um drone
-```http
+```
   GET /drones/${id}
 ```
 | Parâmetro   | Tipo       | Descrição                                   |
@@ -25,7 +25,7 @@ Repositório para entrega final da aceleração de Java na Trybe
 
 
 #### Adiciona um drone
-```http
+```
   POST /drones/
 ```
 Passando no body um json no formato:
@@ -38,7 +38,7 @@ Passando no body um json no formato:
 
 
 #### Modifica as informações de marca e modelo de um drone
-```http
+```
   PUT /drones/${id}
 ```
 | Parâmetro   | Tipo       | Descrição                                   |
@@ -55,7 +55,7 @@ Passando no body um json no formato:
 
 
 #### Deleta um drone
-```http
+```
   DELETE /drones/${id}
 ```
 | Parâmetro   | Tipo       | Descrição                                   |
@@ -67,13 +67,13 @@ Passando no body um json no formato:
 ### Rotas referentes às entregas
 
 #### Retorna todas as entregas
-```http
+```
   GET /entregas/
 ```
 
 
 #### Retorna uma entrega
-```http
+```
   GET /entregas/${id}
 ```
 | Parâmetro   | Tipo       | Descrição                                   |
@@ -82,7 +82,7 @@ Passando no body um json no formato:
 
 
 #### Adiciona uma entrega
-```http
+```
   POST /entregas/
 ```
 Passando no body um json no formato:
@@ -95,7 +95,7 @@ Passando no body um json no formato:
 
 
 #### Modifica as informações de longitude e latitude
-```http
+```
   PUT /entregas/${id}
 ```
 | Parâmetro   | Tipo       | Descrição                                   |
@@ -112,7 +112,7 @@ Passando no body um json no formato:
 
 
 #### Deleta uma entrega
-```http
+```
   DELETE /entregas/${id}
 ```
 | Parâmetro   | Tipo       | Descrição                                   |
