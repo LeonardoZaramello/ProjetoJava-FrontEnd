@@ -10,7 +10,7 @@ Repositório para entrega final da aceleração de Java na Trybe
 ### Rotas referentes aos drones
 
 #### Retorna todos os drones
-```http
+```
   GET /drones/
 ```
 
