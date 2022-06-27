@@ -3,6 +3,8 @@
 
 Repositório para entrega final da aceleração de Java na Trybe
 
+Link do Front-End para consumir a api: https://github.com/LeonardoZaramello/projetojava-frontend
+
 
 ## Documentação da API
 
